@@ -1,3 +1,3 @@
 tasks:
-  - init: npm ci && npm run build:prod
-    command: npm run start:prod
+  - init: npm ci
+    command: npm start

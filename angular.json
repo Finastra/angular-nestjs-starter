@@ -1,7 +1,8 @@
 {
   "version": 1,
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
   },
   "defaultProject": "client",
   "schematics": {
@@ -187,7 +188,10 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["libs/features/home/src/**/*.ts", "libs/features/home/src/**/*.html"]
+            "lintFilePatterns": [
+              "libs/features/home/src/**/*.ts",
+              "libs/features/home/src/**/*.html"
+            ]
           }
         },
         "test": {
