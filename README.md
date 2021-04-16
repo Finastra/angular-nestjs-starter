@@ -29,13 +29,11 @@
 
 ## 🚀 Quick Start
 
-If you just want to check the app
-
 ```
 npm start
 ```
 
-If you want to actually code, we recommend launching the following commands in two separate consoles :
+Or in two separate commands :
 
 ```
 npm run dev
@@ -87,6 +85,10 @@ Server
 - Change your favicon:
 
   Go to [apps/client/src](./apps/client/src/favicon.ico) and replace the current `favicon.ico`
+
+- Start hacking:
+
+  - Go to [libs/features/home/src/lib/home.component.html](./libs/features/home/src/lib/home.component.html) and replace content with your own !
 
 - Enable auth:
   - Go to [apps/server/src/main.ts](./apps/server/src/main.ts) and uncomment
