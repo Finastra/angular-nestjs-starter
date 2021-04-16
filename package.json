@@ -9,6 +9,7 @@
     "dev": "ng build --watch",
     "start": "npm run build && npm run start:server",
     "start:server": "nx serve server --port 9229",
+    "start:prod": "node dist/apps/server/main.js",
     "build": "ng build",
     "build:prod": "ng build client --prod && ng build server --prod",
     "test": "jest",

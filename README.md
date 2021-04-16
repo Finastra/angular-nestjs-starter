@@ -14,10 +14,10 @@
   <a href="https://github.com/Finastra/angular-nestjs-starter/issues">
     <img src="https://img.shields.io/badge/PRs-welcome-green" alt="PRs welcome"/>
   </a>
-  <a href="https://twitter.com/FinastraFS">
+  <a href="https://gitpod.io/#https://github.com/Finastra/angular-nestjs-starter">
     <img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod">
   </a>
-  <a href="https://gitpod.io/#https://github.com/Finastra/angular-nestjs-starter">
+  <a href="https://github.com/facebook/jest">
     <img src="https://jestjs.io/img/jest-badge.svg" alt="unit tests with Jest" />
   </a>
   <a href="https://twitter.com/FinastraFS">
