@@ -1,53 +1,132 @@
+<h1 align="center">Angular NestJS Starter</h1>
 
+<p align="center">
+  <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular Logo" height="120"/>
+  <img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" height="120" alt="Nx Logo">
+  <img src="https://nestjs.com/img/logo-small.svg" height="120" alt="Nest Logo" />
+  <br>
+  <br>
+  <blockquote align="center"><h3>Angular & NestJS starter for enterprise-grade full-stack projects, built under a clean architecture that helps to scale and maintain a fast workflow.</h3></blockquote>
+</p>
 
-# Finastra
+<p align="center">
+  <a href="./LICENSE.md"><img src="https://img.shields.io/github/license/finastra/angular-nestjs-starter" alt="Repo License" /></a>
+  <a href="https://github.com/Finastra/angular-nestjs-starter/issues">
+    <img src="https://img.shields.io/badge/PRs-welcome-green" alt="PRs welcome"/>
+  </a>
+  <a href="https://twitter.com/FinastraFS">
+    <img src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod">
+  </a>
+  <a href="https://gitpod.io/#https://github.com/Finastra/angular-nestjs-starter">
+    <img src="https://jestjs.io/img/jest-badge.svg" alt="unit tests with Jest" />
+  </a>
+  <a href="https://twitter.com/FinastraFS">
+    <img src="https://img.shields.io/twitter/follow/FinastraFS.svg?style=social&label=Follow">
+  </a>
+</p>
 
-This project was generated using [Nx](https://nx.dev).
+<br>
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+## 🚀 Quick Start
 
-🔎 **Powerful, Extensible Dev Tools**
+If you just want to check the app
 
-## Quick Start & Documentation
+```
+npm start
+```
 
-[Nx Documentation](https://nx.dev/angular)
+If you want to actually code, we recommend launching the following commands in two separate consoles :
 
-[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
+```
+npm run dev
 
-[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
+npm run start:server
+```
 
-## Adding capabilities to your workspace
+<br>
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+## 🌟 Features
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+<h3>
+Client
+<img src="https://angular.io/assets/images/logos/angular/angular.svg" height="15" alt="Angular Logo" />
+</h3>
 
-Below are our core plugins:
+- Strict mode
+- Lazy loading
+- Smart and pure components pattern
+- Self-contained components and encapsulated modules
+- Components types (e.g. component, features)
+- Amazing directory structure
+- Unit tests with Jest instead of Karma & Jasmine
+- Dark mode
+- Migration from TSLint to ESLint
+- GitHub Actions workflows for unit tests and build
+  <!-- - Dynamic titles and content meta tags -->
+  <!-- - PWA -->
+  <!-- - i18n -->
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+<h3>
+Server
+<img src="https://nestjs.com/img/logo-small.svg" height="15" alt="Nest Logo" />
+</h3>
 
-There are also many [community plugins](https://nx.dev/nx-community) you could add.
+- Smart Logging (human-readable or JSON if console is not interactive)
+- Proxy
+- Auth ready
 
-## Generate an application
+<br>
 
-Run `ng g @nrwl/angular:app my-app` to generate an application.
+## 🛠️ Make some initial tweaks
 
-> You can use any of the plugins above to generate applications as well.
+- Change application title:
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+  - Go to [apps/client/src/index.html](./apps/client/src/index.html) and inside the `title` tag, replace "AngularNestjsStarter" with your app name.\
+  - Go to [apps/client/src/app/app.component.ts](./apps/client/src/app/app.component.ts) and change the property `appName`
 
-## Generate a library
+- Change your favicon:
+
+  Go to [apps/client/src](./apps/client/src/favicon.ico) and replace the current `favicon.ico`
+
+- Enable auth:
+  - Go to [apps/server/src/main.ts](./apps/server/src/main.ts) and uncomment
+  - Go to [apps/server/src/app/app.module.ts](./apps/server/src/app/app.module.ts) and uncomment
+
+<br>
+
+## Environement variables
+
+| Variable         | Default value                                     |
+| :--------------- | :------------------------------------------------ |
+| `OIDC_CLIENT_ID` |                                                   |
+| `CLIENT_SECRET`  |                                                   |
+| `SESSION_SECRET` | Generated uiid                                    |
+| `FFDC`           | `https://api.fusionfabric.cloud`                  |
+| `PORT`           | `3000`                                            |
+| `OIDC_ISSUER`    | `https://api.fusionfabric.cloud/login/v1/sandbox` |
+| `OIDC_SCOPES`    | `openid profile`                                  |
+| `OIDC_ORIGIN`    | `http://localhost:3000`                           |
+
+> Duplicate the `.env.template` and rename it to .env 👌🏼
+
+<br>
+
+## 🧙‍♂️ Commands
+
+| Command        | Description                                                |
+| :------------- | :--------------------------------------------------------- |
+| `nx`           | See available commands                                     |
+| `dev`          | Builds client in watch mode                                |
+| `start:server` | Builds the server in watch mode                            |
+| `start`        | Builds the client and then starts the server in watch mode |
+| `build:prod`   | Builds both client and server in production mode           |
+| `test:cov`     | Run test and outptus coverage                              |
+
+<br>
+
+_Below are some more advanced commands that might speed up your development flow:_
+
+### Generate a library
 
 Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
@@ -55,51 +134,32 @@ Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 
 Libraries are shareable across libraries and applications. They can be imported from `@finastra/mylib`.
 
-## Development server
-
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
+### Code scaffolding
 
 Run `ng g component my-component --project=my-app` to generate a new component.
 
-## Build
+### Running unit tests
 
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm t` to execute the unit tests via [Jest](https://jestjs.io).
 
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+Run `npm run test:cov` to execute the unit tests and output coverage.
 
 Run `nx affected:test` to execute the unit tests affected by a change.
 
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
+### Understand your workspace
 
 Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
+<br>
+
 ## Further help
 
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+- [Finastra's Developer Portal](https://developer.fusionfabric.cloud/documentation)
+- [Finastra's Design System](https://design.fusionfabric.cloud)
+- [Angular Documentation](https://angular.io/docs)
+- [NestJS Documentation](https://docs.nestjs.com/)
+- [Nx Documentation](https://nx.dev/angular)
 
+<br>
 
-
-
-
-
-## ☁ Nx Cloud
-
-### Computation Memoization in the Cloud
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+[![Brought to you by Finastra](https://raw.githubusercontent.com/fusionfabric/ffdc-sample-corporate-webapp/master/media/spread-knowledge-readme-banner.png)](https://www.finastra.com/)

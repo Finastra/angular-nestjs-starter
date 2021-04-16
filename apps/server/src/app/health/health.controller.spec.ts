@@ -12,9 +12,9 @@ describe('HealthController', () => {
     controller = app.get<HealthController>('HealthController');
   });
 
-  describe('getHello', () => {
+  describe('readiness', () => {
     it('should return true', () => {
-      expect(controller.healthCheck()).toBe(true);
+      expect(controller.readiness()).toBe(true);
     });
   });
 });
