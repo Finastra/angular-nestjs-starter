@@ -10,6 +10,9 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/Finastra/angular-nestjs-starter/actions?query=workflow%3ABuild">
+  <img src="https://github.com/Finastra/angular-nestjs-starter/workflows/Build/badge.svg" alt="Build status" />
+  </a>
   <a href="./LICENSE.md"><img src="https://img.shields.io/github/license/finastra/angular-nestjs-starter" alt="Repo License" /></a>
   <a href="https://github.com/Finastra/angular-nestjs-starter/issues">
     <img src="https://img.shields.io/badge/PRs-welcome-green" alt="PRs welcome"/>
