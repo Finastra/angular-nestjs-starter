@@ -1,7 +1,23 @@
-<div style="text-align: center">
-  <h1>Welcome to client!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-  />
-</div>
+<uxg-global-nav
+  [appName]="appName"
+  [appContent]="appContent"
+  [navbarAction]="navbarAction"
+  [navigationNodes]="navigationNodes"
+  (brandAction)="brandAction()"
+  (nodeChosen)="nodeChosen($event)"
+>
+</uxg-global-nav>
+
+<ng-template #appContent>
+  <router-outlet></router-outlet>
+</ng-template>
+
+<ng-template #navbarAction>
+  <button mat-icon-button color="neutral" aria-label="notifications" aria-expanded="true">
+    <mat-icon>notifications</mat-icon>
+  </button>
+
+  <button mat-icon-button color="gradient" aria-label="uxp-navbar-user-button">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</ng-template>

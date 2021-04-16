@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@finastra/api-interfaces';
+import { Router } from '@angular/router';
+import { routes } from './constants';
 
 @Component({
   selector: 'finastra-root',
@@ -8,6 +8,16 @@ import { Message } from '@finastra/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  appName = 'Angular NestJS Starter';
+  navigationNodes = routes;
+
+  constructor(private router: Router) {}
+
+  nodeChosen(node: any) {
+    this.router.navigate([node.path]);
+  }
+
+  brandAction() {
+    this.router.navigate(['']);
+  }
 }

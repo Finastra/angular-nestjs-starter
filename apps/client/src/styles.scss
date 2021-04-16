@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@finastra/angular-theme/lib/core/core';
+@import '~@finastra/angular-theme/lib/core/theming/all-theme';
+@import '~@finastra/angular-theme/lib/core/typography/typography';
+@import '~@finastra/angular-theme/theme-variables';
+
+@import '~@finastra/angular-components/global-nav/global-nav.theme';
+
+@include uxg-core();
+
+// Add components typography mixins inside this mixin
+@mixin app-typography($typography) {
+}
+
+// Add components theme mixins inside this mixin
+@mixin app-theme($theme) {
+  @include uxg-material-theme($theme);
+  @include uxg-global-nav-theme($theme);
+}
+
+@include app-typography(uxg-typography-config());
+
+@include app-theme($uxg-light-theme);
+
+@media (prefers-color-scheme: dark) {
+  @include app-theme($uxg-dark-theme);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+uxg-global-nav {
+  h6 {
+    text-align: center;
+  }
+}
