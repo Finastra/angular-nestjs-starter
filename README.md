@@ -167,4 +167,4 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 
 <br>
 
-[![Brought to you by Finastra](https://raw.githubusercontent.com/fusionfabric/ffdc-sample-corporate-webapp/master/media/spread-knowledge-readme-banner.png)](https://www.finastra.com/)
+[![Brought to you by Finastra](https://raw.githubusercontent.com/Finastra/finastra-nodejs-libs/develop/media/spread-knowledge-readme-banner%402x.png)](https://www.finastra.com/)
