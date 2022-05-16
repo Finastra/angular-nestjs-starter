@@ -2,19 +2,19 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { HealthController } from './health.controller';
 
 describe('HealthController', () => {
-  let app: TestingModule;
-  let controller;
+  let controller: HealthController;
 
-  beforeAll(async () => {
-    app = await Test.createTestingModule({
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
       controllers: [HealthController],
     }).compile();
-    controller = app.get<HealthController>('HealthController');
+
+    controller = module.get<HealthController>(HealthController);
   });
 
-  describe('readiness', () => {
+  describe('getHello', () => {
     it('should return true', () => {
-      expect(controller.readiness()).toBe(true);
+      expect(controller.healthCheck()).toBe(true);
     });
   });
 });
