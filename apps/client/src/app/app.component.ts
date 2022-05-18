@@ -10,14 +10,36 @@ import { routes } from './constants';
 export class AppComponent {
   appName = 'Angular NestJS Starter';
   navigationNodes = routes;
+  apps = [
+    {
+      "name": "Home",
+      "shortName": "HM",
+      "sso-initiation-urls": {
+        "web": "https://app1.com"
+      }
+    },
+    {
+      "name": "Application",
+      "shortName": "App",
+      "sso-initiation-urls": {
+        "web": "https://app2.com"
+      }
+    },
+    {
+      "name": "Tools",
+      "shortName": "TLS",
+      "sso-initiation-urls": {
+        "web": "https://app3.com"
+      }
+    },
+    {
+      "name": "Settings",
+      "shortName": "Set",
+      "sso-initiation-urls": {
+        "web": "https://app4.com"
+      }
+    }
+  ]
 
-  constructor(private router: Router) {}
-
-  nodeChosen(node: any) {
-    this.router.navigate([node.path]);
-  }
-
-  brandAction() {
-    this.router.navigate(['']);
-  }
+  constructor(private router: Router) { }
 }
