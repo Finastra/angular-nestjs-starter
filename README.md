@@ -131,6 +131,18 @@ Server
 
 _Below are some more advanced commands that might speed up your development flow:_
 
+### Generate a new features
+
+Run `ng g @nrwl/angular:lib my-feature --directory=features` to generate a features library.
+
+### Generate a new cdk
+
+The Component Dev Kit (CDK) is a set of components shared accross you project.
+
+Start by creating your cdk lib by running `ng g @nrwl/angular:lib foo --directory=cdk --simpleModuleName`.
+
+And then run `ng g component foo --project=cdk-foo --flat` to generate a new component.
+
 ### Generate a library
 
 Run `ng g @nrwl/angular:lib my-lib` to generate a library.
@@ -138,10 +150,6 @@ Run `ng g @nrwl/angular:lib my-lib` to generate a library.
 > You can also use any of the plugins above to generate libraries as well.
 
 Libraries are shareable across libraries and applications. They can be imported from `@finastra/mylib`.
-
-### Code scaffolding
-
-Run `ng g component my-component --project=my-app` to generate a new component.
 
 ### Running unit tests
 
