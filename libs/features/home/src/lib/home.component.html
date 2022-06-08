@@ -7,7 +7,203 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<style></style>
+<style>
+  .glitch {
+    color: black;
+    font-size: 60px;
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+  }
 
-<h1 class="uxg-h1">Welcome to your starter app 👋</h1>
-<h2 class="uxg-h2">Start Hacking !</h2>
+  @keyframes noise-anim {
+    0% {
+      clip: rect(18px, 9999px, 41px, 0);
+    }
+    5% {
+      clip: rect(65px, 9999px, 23px, 0);
+    }
+    10% {
+      clip: rect(51px, 9999px, 9px, 0);
+    }
+    15% {
+      clip: rect(89px, 9999px, 23px, 0);
+    }
+    20% {
+      clip: rect(68px, 9999px, 93px, 0);
+    }
+    25% {
+      clip: rect(43px, 9999px, 54px, 0);
+    }
+    30% {
+      clip: rect(79px, 9999px, 74px, 0);
+    }
+    35% {
+      clip: rect(55px, 9999px, 89px, 0);
+    }
+    40% {
+      clip: rect(48px, 9999px, 22px, 0);
+    }
+    45% {
+      clip: rect(80px, 9999px, 16px, 0);
+    }
+    50% {
+      clip: rect(16px, 9999px, 13px, 0);
+    }
+    55% {
+      clip: rect(34px, 9999px, 38px, 0);
+    }
+    60% {
+      clip: rect(88px, 9999px, 57px, 0);
+    }
+    65% {
+      clip: rect(84px, 9999px, 72px, 0);
+    }
+    70% {
+      clip: rect(87px, 9999px, 51px, 0);
+    }
+    75% {
+      clip: rect(20px, 9999px, 8px, 0);
+    }
+    80% {
+      clip: rect(43px, 9999px, 11px, 0);
+    }
+    85% {
+      clip: rect(30px, 9999px, 21px, 0);
+    }
+    90% {
+      clip: rect(1px, 9999px, 76px, 0);
+    }
+    95% {
+      clip: rect(26px, 9999px, 30px, 0);
+    }
+    100% {
+      clip: rect(52px, 9999px, 47px, 0);
+    }
+  }
+  .glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 #0000ee;
+    top: 0;
+    color: #0000ee;
+    background: rgba(var(--color-background), 1);
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+  }
+
+  @keyframes noise-anim-2 {
+    0% {
+      clip: rect(81px, 9999px, 50px, 0);
+    }
+    5% {
+      clip: rect(13px, 9999px, 33px, 0);
+    }
+    10% {
+      clip: rect(9px, 9999px, 89px, 0);
+    }
+    15% {
+      clip: rect(29px, 9999px, 3px, 0);
+    }
+    20% {
+      clip: rect(7px, 9999px, 49px, 0);
+    }
+    25% {
+      clip: rect(86px, 9999px, 70px, 0);
+    }
+    30% {
+      clip: rect(15px, 9999px, 49px, 0);
+    }
+    35% {
+      clip: rect(55px, 9999px, 61px, 0);
+    }
+    40% {
+      clip: rect(27px, 9999px, 24px, 0);
+    }
+    45% {
+      clip: rect(38px, 9999px, 5px, 0);
+    }
+    50% {
+      clip: rect(15px, 9999px, 47px, 0);
+    }
+    55% {
+      clip: rect(91px, 9999px, 1px, 0);
+    }
+    60% {
+      clip: rect(3px, 9999px, 79px, 0);
+    }
+    65% {
+      clip: rect(18px, 9999px, 90px, 0);
+    }
+    70% {
+      clip: rect(34px, 9999px, 80px, 0);
+    }
+    75% {
+      clip: rect(19px, 9999px, 67px, 0);
+    }
+    80% {
+      clip: rect(96px, 9999px, 12px, 0);
+    }
+    85% {
+      clip: rect(15px, 9999px, 73px, 0);
+    }
+    90% {
+      clip: rect(70px, 9999px, 22px, 0);
+    }
+    95% {
+      clip: rect(20px, 9999px, 79px, 0);
+    }
+    100% {
+      clip: rect(29px, 9999px, 88px, 0);
+    }
+  }
+  .glitch:before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 #0000ee;
+    top: 0;
+    color: #0000ee;
+    background: rgba(var(--color-background), 1);
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+  }
+</style>
+
+<h1 class="uxg-h1" style="margin-bottom: 70px">Welcome to your starter app 👋</h1>
+<h3 class="uxg-h3">Here's a 🐈 to show how to make a proxied request:</h3>
+
+<div style="margin-bottom: 200px; width: 400px">
+  <ng-container *ngIf="cat$ | async as cat; else loading">
+    <mat-card>
+      <mat-card-header>
+        <img mat-card-avatar [src]="cat.url" class="uxg-avatar" alt="mat card avatar" />
+        <mat-card-title>{{ cat.breeds[0]?.name }}</mat-card-title>
+        <mat-card-subtitle>{{ cat.breeds[0]?.description }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+  </ng-container>
+
+  <ng-template #loading>
+    <mat-card>
+      <mat-card-content>
+        <div style="display: grid; grid-template-columns: 1fr 5fr">
+          <div class="uxg-icon-category"></div>
+          <uxg-skeleton-text animated style="height: 25px"></uxg-skeleton-text>
+        </div>
+        <div style="margin-top: 30px">
+          <uxg-skeleton-text animated></uxg-skeleton-text>
+          <uxg-skeleton-text animated></uxg-skeleton-text>
+          <uxg-skeleton-text animated></uxg-skeleton-text>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </ng-template>
+</div>
+
+<h2 class="uxg-h1 glitch" data-text="START HACKING !">
+  <a href="vscode://">START HACKING !</a>
+</h2>
