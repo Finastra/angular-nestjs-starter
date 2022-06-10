@@ -21,6 +21,9 @@ module.exports = {
   },
   moduleNameMapper: {
     '@finastra/features/home': '<rootDir>/libs/features/home/src/index.ts',
+    '@finastra/services/cats': '<rootDir>/libs/services/cats/src/index.ts',
+    '@finastra/services/proxy': '<rootDir>/libs/services/proxy/src/index.ts',
+    '@finastra/api-interfaces': '<rootDir>/libs/api-interfaces/src/index.ts',
   },
   moduleFileExtensions: ['ts', 'html', 'js', 'json'],
   collectCoverage: true,

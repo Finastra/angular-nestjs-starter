@@ -44,7 +44,7 @@
     "@angular/router": "13.3.8",
     "@finastra/nestjs-logger": "^0.3.0",
     "@finastra/nestjs-oidc": "^0.24.3",
-    "@finastra/nestjs-proxy": "^0.5.3",
+    "@finastra/nestjs-proxy": "^0.7.0",
     "@nestjs/common": "^8.0.0",
     "@nestjs/config": "^1.1.6",
     "@nestjs/core": "^8.0.0",

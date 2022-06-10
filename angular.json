@@ -34,9 +34,7 @@
             "styles": ["apps/client/src/styles.scss"],
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "node_modules"
-              ]
+              "includePaths": ["node_modules"]
             }
           },
           "configurations": {
@@ -179,6 +177,58 @@
           }
         }
       }
+    },
+    "services-cats": {
+      "projectType": "library",
+      "root": "libs/services/cats",
+      "sourceRoot": "libs/services/cats/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/services/cats"],
+          "options": {
+            "jestConfig": "libs/services/cats/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/services/cats/src/**/*.ts",
+              "libs/services/cats/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
+    },
+    "services-proxy": {
+      "projectType": "library",
+      "root": "libs/services/proxy",
+      "sourceRoot": "libs/services/proxy/src",
+      "prefix": "finastra",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/services/proxy"],
+          "options": {
+            "jestConfig": "libs/services/proxy/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/services/proxy/src/**/*.ts",
+              "libs/services/proxy/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
     }
   }
 }
