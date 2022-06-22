@@ -133,7 +133,7 @@ _Below are some more advanced commands that might speed up your development flow
 
 ### Generate a new features
 
-Run `ng g @nrwl/angular:lib my-feature --directory=features` to generate a features library.
+Run `ng g @nrwl/angular:lib my-feature --directory=features --simpleModuleName` to generate a features library.
 
 ### Generate a new cdk
 
