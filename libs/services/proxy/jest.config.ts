@@ -1,5 +1,6 @@
-module.exports = {
-  displayName: 'services-cats',
+/* eslint-disable */
+export default {
+  displayName: 'services-proxy',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +9,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../coverage/libs/services/cats',
+  coverageDirectory: '../../../coverage/libs/services/proxy',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },
