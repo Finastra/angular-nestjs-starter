@@ -103,11 +103,12 @@ Server
 
 | Variable         | Default value                                     |
 | :--------------- | :------------------------------------------------ |
+| `PORT`           | `3000`                                            |
+| `CATS_API_KEY`   |                                                   |
 | `OIDC_CLIENT_ID` |                                                   |
 | `CLIENT_SECRET`  |                                                   |
 | `SESSION_SECRET` | Generated uiid                                    |
 | `FFDC`           | `https://api.fusionfabric.cloud`                  |
-| `PORT`           | `3000`                                            |
 | `OIDC_ISSUER`    | `https://api.fusionfabric.cloud/login/v1/sandbox` |
 | `OIDC_SCOPES`    | `openid profile`                                  |
 | `OIDC_ORIGIN`    | `http://localhost:3000`                           |
