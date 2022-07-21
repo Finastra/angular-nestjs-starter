@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     const query$ = this.catsService.getCats().pipe(map((cats) => cats[0]));
 
     this.cat$ = query$.pipe(
-      expand((cat) => (cat.breeds.length > 0 ? EMPTY : query$)),
+      expand((cat) => (cat.hasOwnProperty('breeds') && cat.breeds.length > 0 ? EMPTY : query$)),
       filter((cat) => cat.breeds.length > 0)
     );
   }
