@@ -1,14 +1,19 @@
 /* eslint-disable */
 export default {
-  displayName: 'api',
-  preset: '../../jest.preset.js',
+  displayName: 'server',
+  testMatch: ['**/+(*.)+(spec|test).+(ts|js)?(x)'],
+  resolver: '@nrwl/jest/plugins/resolver',
+  moduleFileExtensions: ['ts', 'js', 'html'],
   globals: {
-    'ts-jest': { tsconfig: '<rootDir>/tsconfig.spec.json' },
+    'ts-jest': {
+      tsconfig: '<rootDir>/tsconfig.spec.json'
+    }
   },
   transform: {
-    '^.+\\.[tj]s$': 'ts-jest',
+    '^.+\\.[tj]s$': 'ts-jest'
   },
-  moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/api',
-  testEnvironment: 'node',
+  coverageDirectory: '../../coverage/apps/server',
+  collectCoverage: true,
+  coverageReporters: ['lcov', 'cobertura', 'json'],
+  testEnvironment: 'node'
 };

@@ -97,7 +97,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/client"],
           "options": {
-            "jestConfig": "apps/client/jest.config.js",
+            "jestConfig": "apps/client/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -124,7 +124,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/features/home"],
           "options": {
-            "jestConfig": "libs/features/home/jest.config.js",
+            "jestConfig": "libs/features/home/jest.config.ts",
             "passWithNoTests": true
           }
         }
