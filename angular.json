@@ -2,6 +2,7 @@
   "version": 1,
   "projects": {
     "api-interfaces": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/api-interfaces",
       "sourceRoot": "libs/api-interfaces/src",
       "projectType": "library",
@@ -16,6 +17,7 @@
       }
     },
     "client": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "projectType": "application",
       "root": "apps/client",
       "sourceRoot": "apps/client/src",
@@ -95,13 +97,14 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/client"],
           "options": {
-            "jestConfig": "apps/client/jest.config.js",
+            "jestConfig": "apps/client/jest.config.ts",
             "passWithNoTests": true
           }
         }
       }
     },
     "features-home": {
+      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/features/home",
       "sourceRoot": "libs/features/home/src",
@@ -121,19 +124,20 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/features/home"],
           "options": {
-            "jestConfig": "libs/features/home/jest.config.js",
+            "jestConfig": "libs/features/home/jest.config.ts",
             "passWithNoTests": true
           }
         }
       }
     },
     "server": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/server",
       "sourceRoot": "apps/server/src",
       "projectType": "application",
       "architect": {
         "build": {
-          "builder": "@nrwl/node:build",
+          "builder": "@nrwl/node:webpack",
           "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/server",
@@ -156,7 +160,7 @@
           }
         },
         "serve": {
-          "builder": "@nrwl/node:execute",
+          "builder": "@nrwl/node:node",
           "options": {
             "buildTarget": "server:build"
           }
@@ -172,13 +176,14 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/server"],
           "options": {
-            "jestConfig": "apps/server/jest.config.js",
+            "jestConfig": "apps/server/jest.config.ts",
             "passWithNoTests": true
           }
         }
       }
     },
     "services-cats": {
+      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/services/cats",
       "sourceRoot": "libs/services/cats/src",
@@ -188,7 +193,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/services/cats"],
           "options": {
-            "jestConfig": "libs/services/cats/jest.config.js",
+            "jestConfig": "libs/services/cats/jest.config.ts",
             "passWithNoTests": true
           }
         },
@@ -205,6 +210,7 @@
       "tags": []
     },
     "services-proxy": {
+      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/services/proxy",
       "sourceRoot": "libs/services/proxy/src",
@@ -214,7 +220,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/services/proxy"],
           "options": {
-            "jestConfig": "libs/services/proxy/jest.config.js",
+            "jestConfig": "libs/services/proxy/jest.config.ts",
             "passWithNoTests": true
           }
         },
